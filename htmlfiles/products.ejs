@@ -1,0 +1,209 @@
+<html>
+    <head>
+        <title>Products</title>
+        <link rel="stylesheet" type='text/css' href="../cssfiles/index.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        
+        <script>
+            function hello(){
+                window.location.href='/'
+            }
+            function buy(id){
+                alert(id)
+            }
+            function validate(){
+                var password=document.getElementById('password').value
+                var confirm_password=document.getElementById('cpassword').value
+                if(password!=confirm_password){
+                    alert('Password And Confirmed Password Do Not Match')
+                }
+            }
+            function responsive_view(){
+                var list=document.getElementById('list')
+                var resp_nav=document.getElementById('resp_nav')
+                resp_nav.style.display='block'
+            }
+            function respclose(){
+                var resp_nav=document.getElementById('resp_nav')
+                resp_nav.style.display=''
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+            <div id="nav">
+                <h3 class="nav_elems" style="margin-left: 5px;"><a href="/products?id=1">LadiesPurse</a></h3>
+                <h3 class="nav_elems"><a href="/products?id=2">SchoolBags</a></h3>
+                <h3 class="nav_elems"><a href="/products?id=3">Trolly's</a></h3>
+                <h3 class="nav_elems"><a href="/products?id=4">TravellingBags</a></h3>
+                <h3 class="nav_elems"><a href="/products?id=5">Office/SideBags</a></h3>
+                <img id="icon" src="../bags/icon.png" alt="Burhani Icon" onclick="hello()">
+                <img id="list" src="../bags/list.png" onclick="responsive_view()" >
+                <form method="post" action="/Search">
+                    <input type="search" name="search" class="nav_elem_search " >
+                    <button id="search_logo">🔍</button>
+                </form>
+                <%if(username){%>
+                    <a href="/user"><img style='width: 50px; height: 50px; margin-top: 5px; margin-left: 25px; cursor: pointer;'src="../bags/user.png"></a>
+                    <button class="nav_elem_right" id="logout" ><a href="/logout">LogOut</a></button>
+                    
+                <%}else{%>
+                <button class="nav_elem_right" onclick="loginDialog.showModal()">Login</button>
+                <button class="nav_elem_right" onclick="SignupDialog.showModal()">SignUp</button>
+                <%}%>
+            </div>
+        </center>
+        <dialog id="loginDialog" class="dialogs">
+            <div id="login_image">
+                <img src="../bags/logo_2.png">
+            </div>
+            <div id="loginform">
+                <button onclick="loginDialog.close()" id="close_btn">X</button>
+                <center>
+                    <h1><i>Login</i></h1><hr>
+                    <form method="post" action="/login">
+                        <h3>Username:-</h3> <input type="text" name="username" class="inputs" required><br>
+                        <h3>Email:- </h3><input type="email" name="email" class="inputs" required><br>
+                        <h3>Password:-</h3> <input type="password" name="password" class="inputs" required><br>
+                        <input type="submit" name="submit" id="submit" >
+                    </form>
+                </center>
+            </div>
+        </dialog>
+        <dialog id="SignupDialog" class="dialogs">
+            <div id="login_image">
+                <img src="../bags/logo_2.png">
+            </div>
+            <div id="loginform">
+                <button onclick="SignupDialog.close()" id="close_btn">X</button>
+                <center>
+                    <h1><i>SignUP</i></h1><hr>
+                    <form method="post" action="/signup">
+                        <h3>Username:-</h3> <input type="text" name="username" class="inputs" required><br>
+                        <h3>Email:- </h3><input type="email" name="email" class="inputs" required><br>
+                        <h3>Password:-</h3> <input type="password" name="upassword" class="inputs" id="password" required><br>
+                        <h3>Confirm Password:-</h3> <input type="password" name="cpassword" class="inputs" id="cpassword" required><br>
+                        <input type="submit" name="submit" id="submit" onclick="validate()">
+                    </form>
+                </center>
+            </div>
+        </dialog>
+        <div id='resp_nav'>
+            <button onclick="respclose()" style="float: right; border-radius: 50%; width: 40px;
+            height: 40px;">X</button>
+            <h3 class="resp_nav_elems" ><a href="/products?id=1">LadiesPurse</a></h3>
+            <h3 class="resp_nav_elems"><a href="/products?id=2">SchoolBags</a></h3>
+            <h3 class="resp_nav_elems"><a href="/products?id=3">Trolly's</a></h3>
+            <h3 class="resp_nav_elems"><a href="/products?id=4">TravellingBags</a></h3>
+            <h3 class="resp_nav_elems"><a href="/products?id=5">Office/SideBags</a></h3>
+            <form method="post" action="/Search">
+            <input type="search" name="search" class="resp_nav_elem_search" >
+            <button id="resp_search_logo">🔍</button>
+        </form>
+            <%if(username){%>
+                <a href="/user"><img src="../bags/user.png" id="resp_user_logo"></a><br>
+                <button class="resp_nav_elem_right" id="logout" ><a href="/logout">LogOut</a></button>
+            <%}else{%>
+            <button class="resp_nav_elem_right" onclick="loginDialog.showModal()">Login</button>
+            <button class="resp_nav_elem_right" onclick="SignupDialog.showModal()">SignUp</button>
+            <%}%>
+            
+        </div>
+        
+        <div id="product_container">
+            <% if(id==1){%>
+            <% for (let info of data){ %>
+                <% let name=info.name%>
+                        <% let pname=name.split("_")%>
+                        <% if(pname.includes('side') || pname.includes('whole') || pname.includes('top') || pname.includes('back') ){%>
+                        <% continue%>
+                        <%}%>
+                        <% let fullname=""%>
+                <div class="products_contain">
+                    <img id='products_image' src="../bags/Ladies_Items/<%= info.name%>.<%=info.format%> ">
+                    <% for(let pn=0;pn< pname.length;pn++){%>
+                        <% fullname+= pname[pn]+" "%>
+                        <%}%>
+                        <h1 id="products_name"><%=fullname%></h1>
+                    <h3 id="prize">Prize:- <%=info.prize%></h3>
+                    <button ><a href="/product?id=<%=info._id%>&cid=1">ShopNow</a></button>
+                </div>
+            <%}%>
+            <%}%>
+            <% if(id==2){%>
+                <% for (let info of data){ %>
+                    <% let name=info.name%>
+                        <% let pname=name.split("_")%>
+                        <% if(pname.includes('side') || pname.includes('whole') || pname.includes('top') ||pname.includes('back') ){%>
+                            <% continue%>
+                            <%}%>
+                        <% let fullname=""%>
+                    <div class="products_contain">
+                        <img id='products_image' src="../bags/School_Bags/<%= info.name%>.<%=info.format%> ">
+                        <% for(let pn=0;pn< pname.length;pn++){%>
+                            <% fullname+= pname[pn]+" "%>
+                            <%}%>
+                            <h1 id="products_name"><%=fullname%></h1>
+                        <h3 id="prize">Prize:-<%=info.prize%></h3>
+                        <button ><a href="/product?id=<%=info._id%>&cid=2">ShopNow</a></button>
+                    </div>
+                <%}%>
+                <%}%>
+                <% if(id==3){%>
+                    <% for (let info of data){ %>
+                        <% let name=info.name%>
+                        <% let pname=name.split("_")%>
+                        <% let fullname=""%>
+                        <div class="products_contain">
+                            <img id='products_image' src="../bags/Trolly/<%= info.name%>.<%=info.format%> ">
+                            <% for(let pn=0;pn< pname.length;pn++){%>
+                                <% fullname+= pname[pn]+" "%>
+                                <%}%>
+                                <h1 id="products_name"><%=fullname%></h1>
+                            
+                            <h3 id="prize">Prize:-<%=info.prize%></h3>
+                            <button ><a href="/product?id=<%=info._id%>&cid=3">ShopNow</a></button>
+                        </div>
+                    <%}%>
+                    <%}%>
+                    <% if(id==4){%>
+                        <% for (let info of data){ %>
+                            <% let name=info.name%>
+                        <% let pname=name.split("_")%>
+                        <% let fullname=""%>
+                            <div class="products_contain">
+                                <img id='products_image' src="../bags/Travelling_Bags/<%= info.name%>.<%=info.format%> ">
+                                <% for(let pn=0;pn< pname.length;pn++){%>
+                                    <% fullname+= pname[pn]+" "%>
+                                    <%}%>
+                                    <h1 id="products_name"><%=fullname%></h1>
+                                <h3 id="prize">Prize:-<%=info.prize%></h3>
+                                <button ><a href="/product?id=<%=info._id%>&cid=4">ShopNow</a></button>
+                            </div>
+                        <%}%>
+                        <%}%>
+                        <% if(id==5){%>
+                            <% for (let info of data){ %>
+                                <% let name=info.name%>
+                        <% let pname=name.split("_")%>
+                        <% if(pname.includes('whole') || pname.includes('back') ||pname.includes('open') ){%>
+                            <% continue%>
+                            <%}%>
+                        <% let fullname=""%>
+                                <div class="products_contain">
+                                    <img id='products_image' src="../bags/Office_and_sideBags/<%= info.name%>.<%=info.format%> ">
+                                    <% for(let pn=0;pn< pname.length;pn++){%>
+                                        <% fullname+= pname[pn]+" "%>
+                                        <%}%>
+                                        <h1 id="products_name"><%=fullname%></h1>
+                                    <h3 id="prize">Prize:-<%=info.prize%></h3>
+                                    <button ><a href="/product?id=<%=info._id%>&cid=5">ShopNow</a></button>
+                                </div>
+                            <%}%>
+                            <%}%>
+        </div>
+        <%- include('footer.ejs')%>
+    </body>
+</html>

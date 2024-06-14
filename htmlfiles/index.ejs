@@ -1,0 +1,326 @@
+<html>
+    <head>
+        <title>HomePage</title>
+        <link rel="stylesheet" type='text/css' href="../cssfiles/index.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <script>
+            
+  AOS.init();
+            function hello(){
+                window.location.href='/'
+            }
+            function cover(){
+                window.location.href='/Cover'
+            }
+            function show(value){
+                if(value==1){
+                var img1=document.getElementsByClassName("sub_products_imgs")[0]
+                img1.classList.add("sub_products_imgs_hover")
+                var div1=document.getElementsByClassName("sub_products")[0]
+                var button=document.createElement('button')
+                button.classList.add('products_onhover_button')
+                button.classList.add('animate__animated')
+                button.classList.add('animate__jackInTheBox')
+                var text=document.createTextNode("ShopNow")
+                button.appendChild(text)
+                button.addEventListener('click',()=>{
+                    window.location.href='/products?id=1'
+                })
+                div1.appendChild(button)
+            }
+            else if(value==2){
+                var img1=document.getElementsByClassName("sub_products_imgs")[1]
+                img1.classList.add("sub_products_imgs_hover")
+                var div1=document.getElementsByClassName("sub_products")[1]
+                var button=document.createElement('button')
+                button.classList.add('products_onhover_button')
+                button.classList.add('animate__animated')
+                button.classList.add('animate__jackInTheBox')
+                var text=document.createTextNode("ShopNow")
+                button.appendChild(text)
+                button.addEventListener('click',()=>{
+                    window.location.href='/products?id=2'
+                })
+                div1.appendChild(button)
+            }
+            else if(value==3){
+                var img1=document.getElementsByClassName("sub_products_imgs")[2]
+                img1.classList.add("sub_products_imgs_hover")
+                var div1=document.getElementsByClassName("sub_products")[2]
+                var button=document.createElement('button')
+                button.classList.add('products_onhover_button')
+                button.classList.add('animate__animated')
+                button.classList.add('animate__jackInTheBox')
+                var text=document.createTextNode("ShopNow")
+                button.appendChild(text)
+                button.addEventListener('click',()=>{
+                    window.location.href='/products?id=3'
+                })
+                div1.appendChild(button)
+            }
+            else if(value==4){
+                var img1=document.getElementsByClassName("sub_products_imgs")[3]
+                img1.classList.add("sub_products_imgs_hover")
+                var div1=document.getElementsByClassName("sub_products")[3]
+                var button=document.createElement('button')
+                button.classList.add('products_onhover_button')
+                button.classList.add('animate__animated')
+                button.classList.add('animate__jackInTheBox')
+                var text=document.createTextNode("ShopNow")
+                button.appendChild(text)
+                button.addEventListener('click',()=>{
+                    window.location.href='/products?id=4'
+                })
+                div1.appendChild(button)
+            }
+            else if(value==5){
+                var img1=document.getElementsByClassName("sub_products_imgs")[4]
+                img1.classList.add("sub_products_imgs_hover")
+                var div1=document.getElementsByClassName("sub_products")[4]
+                var button=document.createElement('button')
+                button.classList.add('products_onhover_button')
+                button.classList.add('animate__animated')
+                button.classList.add('animate__jackInTheBox')
+                var text=document.createTextNode("ShopNow")
+                button.appendChild(text)
+                button.addEventListener('click',()=>{
+                    window.location.href='/products?id=5'
+                })
+                div1.appendChild(button)
+            }
+            }
+            function hide(value){
+                if(value==0){
+                var img1=document.getElementsByClassName("sub_products_imgs")[0]
+                img1.classList.remove("sub_products_imgs_hover")
+                var div1=document.getElementsByClassName("sub_products")[0]
+                var  button=document.getElementsByClassName('products_onhover_button')[0]
+                div1.removeChild(button)
+                }
+                else if(value==1){
+                var img1=document.getElementsByClassName("sub_products_imgs")[1]
+                img1.classList.remove("sub_products_imgs_hover")
+                var div1=document.getElementsByClassName("sub_products")[1]
+                var  button=document.getElementsByClassName('products_onhover_button')[0]
+                div1.removeChild(button)
+                }
+                else if(value==2){
+                var img1=document.getElementsByClassName("sub_products_imgs")[2]
+                img1.classList.remove("sub_products_imgs_hover")
+                var div1=document.getElementsByClassName("sub_products")[2]
+                var  button=document.getElementsByClassName('products_onhover_button')[0]
+                div1.removeChild(button)
+                }
+                else if(value==3){
+                var img1=document.getElementsByClassName("sub_products_imgs")[3]
+                img1.classList.remove("sub_products_imgs_hover")
+                var div1=document.getElementsByClassName("sub_products")[3]
+                var  button=document.getElementsByClassName('products_onhover_button')[0]
+                div1.removeChild(button)
+                }
+                else if(value==4){
+                var img1=document.getElementsByClassName("sub_products_imgs")[4]
+                img1.classList.remove("sub_products_imgs_hover")
+                var div1=document.getElementsByClassName("sub_products")[4]
+                var  button=document.getElementsByClassName('products_onhover_button')[0]
+                div1.removeChild(button)
+                }
+            }
+            function validate(){
+                var password=document.getElementById('password').value
+                var confirm_password=document.getElementById('cpassword').value
+                if(password!=confirm_password){
+                    alert('Password And Confirmed Password Do Not Match')
+                }
+            }
+            function responsive_view(){
+                var list=document.getElementById('list')
+                var resp_nav=document.getElementById('resp_nav')
+                resp_nav.style.display='block'
+            }
+            function respclose(){
+                var resp_nav=document.getElementById('resp_nav')
+                resp_nav.style.display=''
+            }
+            function cssadd(id,css){
+                var btn=document.getElementById(id);
+                btn.classList.add(css)
+        }
+            
+            
+        </script>
+    </head>
+    <body>
+        <center>
+            <div id="nav">
+                <h3 class="nav_elems" style="margin-left: 5px;"><a href="/products?id=1">LadiesPurse</a></h3>
+                <h3 class="nav_elems"><a href="/products?id=2">SchoolBags</a></h3>
+                <h3 class="nav_elems"><a href="/products?id=3">Trolly's</a></h3>
+                <h3 class="nav_elems"><a href="/products?id=4">TravellingBags</a></h3>
+                <h3 class="nav_elems"><a href="/products?id=5">Office/SideBags</a></h3>
+                <img id="icon" src="../bags/icon.png" alt="Burhani Icon" onclick="hello()">
+                <img id="list" src="../bags/list.png" onclick="responsive_view()" >
+                
+                <form method="post" action="/Search">
+                <input type="search" name="search" class="nav_elem_search" >
+                <button id="search_logo">🔍</button>
+            </form>
+                <%if(username){%>
+                    <a href="/user"><img style='width: 50px; height: 50px; margin-top: 5px; margin-left: 25px; cursor: pointer;'src="../bags/user.png" ></a>
+                    <button class="nav_elem_right" id="logout" ><a href="/logout">LogOut</a></button>
+                <%}else{%>
+                <button class="nav_elem_right" onclick="loginDialog.showModal()">Login</button>
+                <button class="nav_elem_right" onclick="SignupDialog.showModal()">SignUp</button>
+                <%}%>
+                
+            </div>
+        </center>
+        <dialog id="loginDialog" class="dialogs">
+            <div id="login_image">
+                <img src="../bags/logo_2.png">
+            </div>
+            <div id="loginform">
+                <button onclick="loginDialog.close()" id="close_btn">X</button>
+                <center>
+                    <h1><i>Login</i></h1><hr>
+                    <form method="post" action="/login">
+                        <h3>Username:-</h3> <input type="text" name="username" class="inputs" required><br>
+                        <h3>Email:- </h3><input type="email" name="email" class="inputs" required><br>
+                        <h3>Password:-</h3> <input type="password" name="password" class="inputs" required><br>
+                        <input type="submit" name="submit" id="submit" >
+                    </form>
+                </center>
+            </div>
+        </dialog>
+        <dialog id="SignupDialog" class="dialogs">
+            <div id="login_image">
+                <img src="../bags/logo_2.png">
+            </div>
+            <div id="loginform">
+                <button onclick="SignupDialog.close()" id="close_btn">X</button>
+                <center>
+                    <h1><i>SignUP</i></h1><hr>
+                    <form method="post" action="/signup">
+                        <h3>Username:-</h3> <input type="text" name="username" class="inputs" required><br>
+                        <h3>Email:- </h3><input type="email" name="email" class="inputs" required><br>
+                        <h3>Password:-</h3> <input type="password" name="upassword" class="inputs" id="password" required><br>
+                        <h3>Confirm Password:-</h3> <input type="password" name="cpassword" class="inputs" id="cpassword" required><br>
+                        <input type="submit" name="submit" id="submit" onclick="validate()">
+                    </form>
+                </center>
+            </div>
+        </dialog>
+        <div id='resp_nav'>
+            <button onclick="respclose()" style="float: right; border-radius: 50%; width: 40px;
+            height: 40px;">X</button>
+            <h3 class="resp_nav_elems" ><a href="/products?id=1">LadiesPurse</a></h3>
+            <h3 class="resp_nav_elems"><a href="/products?id=2">SchoolBags</a></h3>
+            <h3 class="resp_nav_elems"><a href="/products?id=3">Trolly's</a></h3>
+            <h3 class="resp_nav_elems"><a href="/products?id=4">TravellingBags</a></h3>
+            <h3 class="resp_nav_elems"><a href="/products?id=5">Office/SideBags</a></h3>
+            <form method="post" action="/Search">
+            <input type="search" name="search" class="resp_nav_elem_search" >
+            <button id="resp_search_logo">🔍</button>
+        </form>
+            <%if(username){%>
+                <a href="/user"><img src="../bags/user.png" id="resp_user_logo"></a><br>
+                <button class="resp_nav_elem_right" id="logout" ><a href="/logout">LogOut</a></button>
+            <%}else{%>
+            <button class="resp_nav_elem_right" onclick="loginDialog.showModal()">Login</button>
+            <button class="resp_nav_elem_right" onclick="SignupDialog.showModal()">SignUp</button>
+            <%}%>
+            
+        </div>
+        <div class="animate__animated animate__fadeInLeft" data-aos="fade-right" id="introduction" >
+            <h1 id="first">Welcome To,</h1>
+            <h1 id="secound">Burhani </h1>
+            <h1 id="third">Bag</h1>
+            <h5 id="fourth">A Virtual Store </h5>
+            <button class="animate__animated " id="sixth" onmouseenter="cssadd('sixth','animate__jackInTheBox')" ><a href="#products">ShopNow</a></button>
+        </div>
+            <div id="products">
+                <div class="sub_products" onmouseenter="show(1)" onmouseleave="hide(0)">
+                    <img  class="sub_products_imgs"src="../bags/Ladies_Items/Designer_purse_black_and_white_whole.jpg">
+                </div>
+                <div class="sub_products" onmouseenter="show(2)" onmouseleave="hide(1)">
+                    <img class="sub_products_imgs" src="../bags/School_Bags/School_bag_set_of_6.jpeg">
+                </div>
+                <div class="sub_products" onmouseenter="show(3)" onmouseleave="hide(2)">
+                    <img class="sub_products_imgs" src="../bags/Trolly/trolly_4_different_colors.jpeg">
+                </div>
+                <div class="sub_products" onmouseenter="show(4)" onmouseleave="hide(3)">
+                    <img class="sub_products_imgs" src="../bags/Travelling_Bags/duffles.jpg">
+                </div>
+                <div class="sub_products" onmouseenter="show(5)" onmouseleave="hide(4)">
+                    <img class="sub_products_imgs" src="../bags/Office_and_sideBags/Office_bag_black_whole.jpg">
+                </div>
+            </div>
+            <div id="Suitcase_Cover">
+                <div id="Suitcase_Cover_data">
+                    <h3 class="suitcse_cover_data">
+                    -->GET YOUR SUITCASES A MAKEOVER <--
+                    </h3>
+                    <h2 class="suitcse_cover_data">
+                        -->WITH BEAUTY AND PROTECTION<--
+                    </h2>
+                    <h1 class="suitcse_cover_data">-->GET YOUR SUITCASE A TRANSPARENT COVER!!<--</h1>
+                    <button id='knh'style="border-radius: 20%;" class="animate__animated" onclick="cover()" onmouseenter="cssadd('knh','animate__jackInTheBox')">KnowHow</button>
+                </div>
+                <div id="Suitcase_Cover_image" >
+                    <img id='transparent_cover_image' class="animate__animated" onmouseenter="cssadd('transparent_cover_image','animate__zoomIn')" src="../bags/Transparent_cover_front_view.png">
+                </div>
+            </div>
+                <div class="best_product">
+                    <div id="best_product_image_div">
+                        <img id="best_product_image" src="../bags/Trolly/trolly_Brown_set_of_3.jpeg">
+                    </div>
+                    <div id="best_product_data">
+                        <img id="best_product_data_image" src="../bags/Trolly/trolly_Brown_set_of_3.jpeg">
+                        <h1 class="best_prodct_data">Get This Product <i><u>trolly brown set of three</u></i> today at an amazing discount of 20%</h1>
+                        <h3 class="best_prodct_data"><i><big>₹3999</big></i></h3>
+                        <button id="best_prodct_data_btn" class="animate__animated" onmouseenter="cssadd('best_prodct_data_btn','animate__jackInTheBox')"><a href="/product?id=6595096004490ff542e0a73d&cid=3">ShopNow</a></button>
+                    </div>
+                </div>
+                <div id="school_bag">
+                    <div class="school_bag_divs">
+                        <img id="best_product_data_image" src="../bags/School_Bags/School_bag_blue.jpeg">
+                        <h1 class="best_prodct_data">Get This Product <i><u>School_bag_blue</u></i> today at an amazing discount of 20%</h1>
+                        <h3 class="best_prodct_data"><i><big>₹499</big></i></h3>
+                        <button id="best_prodct_data_btn" class="animate__animated" ><a href="/product?id=65956f265081a3c588d16950&cid=2">ShopNow</a></button>
+                        
+                    </div>
+                    <div class="school_bag_divs">
+                        <img id='school_bag_image' src="../bags/School_Bags/School_bag_blue.jpeg">
+                    </div>
+                </div>
+                <div id="benifits">
+                    <div class="benifits_divs">
+                        <div class="benifits_icons">
+                             <img src="../bags/discount.png" class="benifits_icons">
+                             <h1>Great Discount</h1>
+                             <p>Bag the Savings: Unzip Discounts, Pack Style!  </p>
+                        </div>
+                    </div>
+                    <div class="benifits_divs">
+                        <div class="benifits_icons">
+                             <img src="../bags/shipping.jpg" class="benifits_icons">
+                             <h1>Free Shipping</h1>
+                             <p>Swift Shipping, Stylish Bags – Your Trendy Treasures Delivered with Care!  </p>
+                        </div>
+                    </div>
+                    <div class="benifits_divs">
+                        <div class="benifits_icons">
+                             <img src="../bags/quality.png" class="benifits_icons">
+                             <h1>Quality Assurance</h1>
+                             <p>Crafting Confidence, Ensuring Excellence – Your Bag, Our Guarantee  </p>
+
+                        </div>                    
+                    </div>
+                </div>
+                <%- include('footer.ejs')%>
+    </body>
+</html>

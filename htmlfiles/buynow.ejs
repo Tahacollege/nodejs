@@ -1,0 +1,180 @@
+<html>
+    <head>
+        <title>Products</title>
+        <link rel="stylesheet" type='text/css' href="../cssfiles/index.css">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <script>
+            function hello(){
+                window.location.href='/'
+            }
+            function buy(id){
+                alert(id)
+            }
+            function validate(){
+                var password=document.getElementById('password').value
+                var confirm_password=document.getElementById('cpassword').value
+                if(password!=confirm_password){
+                    alert('Password And Confirmed Password Do Not Match')
+                }
+            }
+            function eraze(){
+            var Message=document.getElementById('Message')
+            setTimeout(()=>{
+                Message.classList.add('Messagecss')
+            },100)
+        }
+        function responsive_view(){
+                var list=document.getElementById('list')
+                var resp_nav=document.getElementById('resp_nav')
+                resp_nav.style.display='block'
+            }
+            function respclose(){
+                var resp_nav=document.getElementById('resp_nav')
+                resp_nav.style.display=''
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+            <div id="nav">
+                <h3 class="nav_elems" style="margin-left: 5px;"><a href="/products?id=1">LadiesPurse</a></h3>
+                <h3 class="nav_elems"><a href="/products?id=2">SchoolBags</a></h3>
+                <h3 class="nav_elems"><a href="/products?id=3">Trolly's</a></h3>
+                <h3 class="nav_elems"><a href="/products?id=4">TravellingBags</a></h3>
+                <h3 class="nav_elems"><a href="/products?id=5">Office/SideBags</a></h3>
+                <img id="icon" src="../bags/icon.png" alt="Burhani Icon" onclick="hello()">
+                <img id="list" src="../bags/list.png" onclick="responsive_view()" >
+                <form method="post" action="/Search">
+                    <input type="search" name="search" class="nav_elem_search " >
+                    <button id="search_logo">🔍</button>
+                </form>
+                <%if(username){%>
+                    <a href="/user"><img style='width: 50px; height: 50px; margin-top: 5px; margin-left: 25px; cursor: pointer;'src="../bags/user.png"></a>
+                    <button class="nav_elem_right" id="logout" ><a href="/logout">LogOut</a></button>
+                    
+            <%}%>
+            </div>
+        </center>
+        <div id='resp_nav'>
+            <button onclick="respclose()" style="float: right; border-radius: 50%; width: 40px;
+            height: 40px;">X</button>
+            <h3 class="resp_nav_elems" ><a href="/products?id=1">LadiesPurse</a></h3>
+            <h3 class="resp_nav_elems"><a href="/products?id=2">SchoolBags</a></h3>
+            <h3 class="resp_nav_elems"><a href="/products?id=3">Trolly's</a></h3>
+            <h3 class="resp_nav_elems"><a href="/products?id=4">TravellingBags</a></h3>
+            <h3 class="resp_nav_elems"><a href="/products?id=5">Office/SideBags</a></h3>
+            <form method="post" action="/Search">
+            <input type="search" name="search" class="resp_nav_elem_search" >
+            <button id="resp_search_logo">🔍</button>
+        </form>
+            <%if(username){%>
+                <a href="/user"><img src="../bags/user.png" id="resp_user_logo"></a><br>
+                <button class="resp_nav_elem_right" id="logout" ><a href="/logout">LogOut</a></button>
+            <%}else{%>
+            <button class="resp_nav_elem_right" onclick="loginDialog.showModal()">Login</button>
+            <button class="resp_nav_elem_right" onclick="SignupDialog.showModal()">SignUp</button>
+            <%}%>
+            
+        </div>
+        
+        <%if(Message){%>
+<h1 style="background-color: green; text-align: center;" id="Message" onmouseenter="eraze()"><%=Message%></h1>
+            <%}%>
+        <div id="buynowcontainer">
+            <div class="buynowitems">
+                <img  src="../bags/<%=data.foldername%>/<%=data.name%>.<%=data.format%>">
+            </div>
+            <dialog id="quantitymodify">
+                <center>
+                <button onclick="quantitymodify.close()" id="close_btn">X</button>
+                <h2>Type Quantity:- </h2>
+                <form method="post" action="/buynowmodify">
+                    <input type="hidden" name="pid" value="<%=data._id%>">
+                    <input type="hidden" name="collectionname" value="<%=data.id%>">
+                    <input type="number" name="quantity" id="quantity"><br>
+                <button id="submit" onclick="covert()">Save</button>
+            </form>
+               
+            </center>
+            </dialog>
+            <div class="buynowitems">
+                <center>
+                    <%var sm_name=data.name%>
+                    <%var sm_fullname=""%>
+                    <% var prize=data.prize%>
+                    <% var totalamount=count*prize.slice(1,)%>
+                <%var sm_pname=sm_name.split("_")%>
+                <%for(var p=0;p< sm_pname.length;p++){%>
+                    <%sm_fullname+=sm_pname[p]+" "%>
+                <%}%><br><br>
+                    <h1 style="text-transform: capitalize;"> product-name:<%=sm_fullname%></h1>
+                    <h1 style="text-transform: capitalize;"> product-prize:<%=data.prize%></h1>
+                    <h1 style="text-transform: capitalize;"> product-color:<%=data.color%></h1>
+                    <h1 style="text-transform: capitalize;"> product-quantity:<%=count%></h1>
+                    <h1 style="text-transform: capitalize;"> Total-Prize:₹<%=totalamount%></h1>
+                    <button id="submit" style="width: 200px;" onclick="quantitymodify.showModal()">ChangeQuantity??</button>
+                </center>
+            </div>
+            <div class="buynowitems">
+                <div class="user_details">
+                    <%if(!userinfo.number ||!userinfo.address ||!userinfo.landmark ||!userinfo.pincode){%>
+                    <form method="post" action="/buynowmodify">
+                        <center>
+                            <input type="hidden" name="pid" value="data._id">
+                            <input type="hidden" name="collectionname" value="data.id">
+                        <h2>Mobile Number:- </h2>
+                        <input type="number" name="number" class="input" required>
+                        <h2>Address:- </h2>
+                        <input type="text" name="address" class="input" required>
+                        <h2>Landmark:- </h2>
+                        <input type="text" name="landmark" class="input" required>
+                        <h2>Pincode:- </h2>
+                        <input type="number" name="pincode" class="input" required><br><br>
+                        <input type="submit" id="sbtn">
+                        </center>
+                    </form>
+                    <%}else{%>
+                        <h1>Address Details</h1>
+                        <br><br>
+                        <h1>Number:- <%=userinfo.number%></h1>
+                        <h1>Address:- <%=userinfo.address%></h1>
+                        <h1>Landmark:- <%=userinfo.landmark%></h1>
+                        <h1>Pincode:- <%=userinfo.pincode%></h1>
+                        <button onclick="update_dailog.showModal()">Update Details</button>
+                        <%}%>
+                </div>
+                <dialog id="update_dailog">
+                    <button onclick="update_dailog.close()" id="close_btn">X</button>
+                    <center>
+                        <form method="post" action="/buynowmodify">
+                            <center>
+                                <input type="hidden" name="pid" value="<%=data._id%>">
+                                <input type="hidden" name="collectionname" value="<%=data.id%>">
+                                
+                            <h2>Mobile Number:- </h2>
+                            <input type="number" name="number" class="input">
+                            <h2>Address:- </h2>
+                            <input type="text" name="address" class="input">
+                            <h2>Landmark:- </h2>
+                            <input type="text" name="landmark" class="input">
+                            <h2 >Pincode:- </h2>
+                            <input type="number" name="pincode" class="input"><br><br>
+                            <input type="submit" id="sbtn">
+                            </center>
+                        </form>
+                    </center>
+                </dialog>
+            
+            </div>
+        </div>
+            <form method="post" action="/email">
+                <input type="hidden" name="pid" value="<%=data._id%>">
+                <input type="hidden" name="colname" value="<%=data.foldername%>">
+                <input type="hidden" name="count" value="<%=count%>">
+                <button id="placeorder">Place Order</button>
+            </form>
+        <%- include('footer.ejs')%>
+    </body>
+</html>

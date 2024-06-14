@@ -1,0 +1,170 @@
+<html>
+    <head>
+        <title>User Page</title>
+        <link rel="stylesheet" type='text/css' href="../cssfiles/index.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        
+        <script>
+            function hello(){
+                window.location.href='/'
+            }
+            function responsive_view(){
+                var list=document.getElementById('list')
+                var resp_nav=document.getElementById('resp_nav')
+                resp_nav.style.display='block'
+            }
+            function respclose(){
+                var resp_nav=document.getElementById('resp_nav')
+                resp_nav.style.display=''
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+            <div id="nav">
+                <h3 class="nav_elems" style="margin-left: 5px;"><a href="/products?id=1">LadiesPurse</a></h3>
+                <h3 class="nav_elems"><a href="/products?id=2">SchoolBags</a></h3>
+                <h3 class="nav_elems"><a href="/products?id=3">Trolly's</a></h3>
+                <h3 class="nav_elems"><a href="/products?id=4">TravellingBags</a></h3>
+                <h3 class="nav_elems"><a href="/products?id=5">Office/SideBags</a></h3>
+                <img id="icon" src="../bags/icon.png" alt="Burhani Icon" onclick="hello()">
+                <img id="list" src="../bags/list.png" onclick="responsive_view()" >
+                <form method="post" action="/Search">
+                    <input type="search" name="search" class="nav_elem_search " >
+                    <button id="search_logo">🔍</button>
+                </form>
+                    <a href="/user"><img style='width: 50px; height: 50px; margin-top: 5px; margin-left: 25px; cursor: pointer;'src="../bags/user.png"></a>
+                    <button class="nav_elem_right" id="logout" ><a href="/logout">LogOut</a></button>
+                
+            </div>
+        </center>
+        <div id='resp_nav'>
+            <button onclick="respclose()" style="float: right; border-radius: 50%; width: 40px;
+            height: 40px;">X</button>
+            <h3 class="resp_nav_elems" ><a href="/products?id=1">LadiesPurse</a></h3>
+            <h3 class="resp_nav_elems"><a href="/products?id=2">SchoolBags</a></h3>
+            <h3 class="resp_nav_elems"><a href="/products?id=3">Trolly's</a></h3>
+            <h3 class="resp_nav_elems"><a href="/products?id=4">TravellingBags</a></h3>
+            <h3 class="resp_nav_elems"><a href="/products?id=5">Office/SideBags</a></h3>
+            <form method="post" action="/Search">
+            <input type="search" name="search" class="resp_nav_elem_search" >
+            <button id="resp_search_logo">🔍</button>
+        </form>
+            <%if(username){%>
+                <a href="/user"><img src="../bags/user.png" id="resp_user_logo"></a><br>
+                <button class="resp_nav_elem_right" id="logout" ><a href="/logout">LogOut</a></button>
+            <%}else{%>
+            <button class="resp_nav_elem_right" onclick="loginDialog.showModal()">Login</button>
+            <button class="resp_nav_elem_right" onclick="SignupDialog.showModal()">SignUp</button>
+            <%}%>
+            
+        </div>
+        
+        <div id="user">
+            <div class="user_details">
+                <img id='usericon' src="../bags/user.png">
+            </div>
+            <div class="user_details">
+                <h1>User Details</h1>
+            <br><br><br>
+                    <h1>Username:- <%=username%></h1>
+                    <h1>email:- <%=userinfo.email%></h1>
+                    <h1 style="text-transform: none;">Password:- <%=userinfo.password%></h1>
+                    <button onclick="Password_dailog.showModal()">Change Password</button>
+            </div>
+            <dialog id="Password_dailog">
+                <button onclick="Password_dailog.close()" id="close_btn">X</button>
+                <center>
+                    <h1>New Password:- </h1>
+                <form method="post" action="/change_password">
+                <input type="password" name="password" id="pass" required>
+                <input type="submit" id="submit_btn">
+            </form>
+                </center>
+            </dialog>
+
+            <div class="user_details">
+                <%if(!userinfo.number ||!userinfo.address ||!userinfo.landmark ||!userinfo.pincode){%>
+                <form method="post" action="/additonal_details">
+                    <center>
+                    <h2>Mobile Number:- </h2>
+                    <input type="number" name="number" class="input">
+                    <h2>Address:- </h2>
+                    <input type="text" name="address" class="input">
+                    <h2>Landmark:- </h2>
+                    <input type="text" name="landmark" class="input">
+                    <h2>Pincode:- </h2>
+                    <input type="number" name="pincode" class="input"><br><br>
+                    <input type="submit" id="sbtn">
+                    </center>
+                </form>
+                <%}else{%>
+                    <h1>Address Details</h1>
+                    <br><br>
+                    <h1>Number:- <%=userinfo.number%></h1>
+                    <h1>Address:- <%=userinfo.address%></h1>
+                    <h1>Landmark:- <%=userinfo.landmark%></h1>
+                    <h1>Pincode:- <%=userinfo.pincode%></h1>
+                    <button onclick="update_dailog.showModal()">Update Details</button>
+                    <%}%>
+            </div>
+            <dialog id="update_dailog">
+                <button onclick="update_dailog.close()" id="close_btn">X</button>
+                <center>
+                    <form method="post" action="/additonal_details">
+                        <center>
+                        <h2>Mobile Number:- </h2>
+                        <input type="number" name="number" class="input" >
+                        <h2>Address:- </h2>
+                        <input type="text" name="address" class="input" >
+                        <h2>Landmark:- </h2>
+                        <input type="text" name="landmark" class="input" >
+                        <h2 >Pincode:- </h2>
+                        <input type="number" name="pincode" class="input" ><br><br>
+                        <input type="submit" id="sbtn">
+                        </center>
+                    </form>
+                </center>
+            </dialog>
+        </div>
+        <div id="cartItems">
+            <%if(cart_prs){%>
+                <% var len=cart_prs.length%>
+                <% for (var i=0;i< len; i++){ %>
+                    
+            <div class="similar_products">
+                <img class='similar_products_image' src="../bags/<%=cart_prs[i].foldername%>/<%= cart_prs[i].name%>.<%=cart_prs[i].format%> ">
+                    <%var sm_name=cart_prs[i].name%>
+                    <% var Prize=cart_prs[i].prize%>
+                    <% var totalamount=prscount[i]*Prize.slice(1,)%>
+                <%var sm_fullname=""%>
+                <%var sm_pname=sm_name.split("_")%>
+                <%for(var p=0;p< sm_pname.length;p++){%>
+                    <%sm_fullname+=sm_pname[p]+" "%>
+                <%}%>
+                    <h1 style="text-transform: capitalize;">Name:-<%=sm_fullname%></h1>
+                    <h3>Quantity:- <%=prscount[i]%>/ Prize:- ₹<%=Prize.slice(1,)%></h3>
+                    <h3>Prize:-₹<%= totalamount%></h3>
+                    <form method="post" action="/buynow">
+                        <input type="hidden" name="id" value="<%=cart_prs[i]._id%>">
+                        <input type="hidden" name="collection_id" value="<%=cart_prs[i].id%>">
+                    <button style="width: 100px;
+                    height: 30px;
+                    background-color: rgba(202,203,201,255,0);
+                    border-radius: 20%;
+                    font-weight: 900;
+                    cursor: pointer;">BuyNow</button>
+                    </form>
+                    <a href="/delete_from_cart?pid=<%=cart_prs[i]._id%>"><img src="../bags/dustbin.png" style="width: 30px; height: 30px; margin-top: -50px; margin-left: 250px; cursor: pointer;"></a>
+            </div>
+            <%}%>
+                   
+                <%}else if(cart_prs=='undefined'){%>
+                    <h1>Empty Cart</h1>
+                    <%}%>        
+        </div>
+        <%- include('footer.ejs')%>
+    </body>
+</html>

@@ -1,0 +1,1335 @@
+/*Navbar CSS start*/
+
+#heading{
+    color: aqua;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+#nav{
+    height: 70px;
+    margin: 5px;
+    display: flex;
+    
+}
+#list {
+    display: none;
+}
+.nav_elems{
+    margin-right: 20px;
+    cursor: pointer;
+}
+#icon{
+    width: 210px;
+    mix-blend-mode:multiply;
+    cursor: pointer;
+}
+#resp_nav{
+    display: none;
+}
+.nav_elem_search{
+    margin-left: 30px;
+    background-color: rgb(252, 252, 252);
+    height: 50px;
+    width: 300px;
+    border-radius: 20px;
+}
+.nav_elem_right{
+    margin-left: 30px;
+    border-radius: 30px;
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+#search_logo{
+    width: 70px;
+    height: 50px;
+    margin-left: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 20px;
+}
+.nav_elems:hover{
+    text-decoration: underline;
+}
+.nav_elem_right:hover{
+    background-color: black;
+    color: wheat;
+    font-weight: 900;
+}
+#logout:hover{
+    background-color: black;
+    a{
+    color: wheat;
+    }
+    font-weight: 900;
+}
+.dialogs{
+    width: 1050px;
+    height: 650px;
+    border-radius: 20%;
+    background-color: rgba(202,203,201,255);
+}
+#login_image{
+    width: 500px;
+    height: auto; 
+}
+#login_image>img{
+    padding: 20px;
+    width: 500px;
+    height: 590px;
+    border-radius: 20%;
+}
+#loginform{
+    width: 490px;
+    height: 590px;
+    margin-top: -600px;
+    margin-left: 530px;
+}
+.inputs{
+    width: 480px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 50px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+#submit{
+    width: 100px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 900;
+}
+#submit:hover,#close_btn:hover{
+    
+        color: wheat;
+        font-weight: 900;
+    
+    background-color: black;
+    
+}
+#close_btn{
+    float: right;
+    width: 40px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 50px;
+}
+/*Navbar CSS End*/
+
+/*Introduction CSS start*/
+#introduction{
+    margin-top: -20px;
+    height: 500px;
+    font-family:cursive;
+    background-image: url('../bags/burhani_logo_2.png');
+    mix-blend-mode:multiply;
+    background-position:center;
+    background-attachment: fixed;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+#secound{
+    margin-left: 100px;
+    margin-top: 10px;
+    font-size: 45px;
+    font-family:Arial, Helvetica, sans-serif;
+    color:darkslategrey;
+    font-weight: 900;
+    letter-spacing: 5px;
+}
+#third{
+    margin-left: 170px;
+    font-size: 45px;
+    font-family:Arial, Helvetica, sans-serif;
+    color:darkslategrey;
+    font-weight: 900;
+    letter-spacing: 5px;
+}
+#fourth{
+    font-size: 30px;
+    margin-left: 50px;
+}
+#sixth{
+    margin-left: 130px;
+    width: 100px;
+    font-weight: 900;
+    height: 50px;
+    border-radius: 20%;
+    margin-top: 50px;
+    cursor: pointer;
+    background-color: rgba(202,203,201,255);
+    box-shadow: 20px 20px 20px 2px rgb(7, 7, 7);
+    
+}
+
+#sixth:hover{
+    a{
+        color: wheat;
+    }
+    background-color: black;
+    
+}
+
+/*Introduction CSS End*/
+/*Products Css Start*/
+#products{
+    width: auto;
+    height: 500px;
+    display: flex;
+    overflow-y: scroll;
+    padding: 20px;
+    overflow-x:visible;
+}
+.sub_products{
+    width: 500px;
+    margin: 5px;
+}
+.sub_products_on_hover{
+    filter: blur(0px);
+}
+.sub_products_imgs{
+    border-radius: 20px;
+    width: 480px;
+    height: 480px;
+}
+.sub_products_imgs_hover{
+    filter: blur(4px);
+}
+.products_onhover_button{
+    width: 420px;
+    height: 50px;
+    margin-top: -80px;
+    margin-left: 30px;
+    background-color: rgba(202,203,201,255);
+    color: black;
+    font-weight: 900;
+    cursor: pointer;
+    filter: blur(0px);
+}
+.products_onhover_button:hover{
+    background-color: black;
+    color: wheat;
+}
+/*Prodcuts Css End*/
+/*Suitcase cover data css start*/
+#Suitcase_Cover{
+    width: auto;
+    height: 600px;
+    padding: 20px;
+    display: flex;
+}
+#Suitcase_Cover_data{
+    height: auto;
+    width: 800px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.suitcse_cover_data{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 5px;
+    border-radius: 50px;
+    box-shadow: 20px 20px 20px 2px rgb(7, 7, 7);
+}
+#Suitcase_Cover_data>h1{
+    text-align: center;
+    padding: 5px;
+    
+}
+#Suitcase_Cover_data>button{
+    width: 500px;
+    margin-top: 50px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+    font-size: larger;
+    height: 50px;
+    letter-spacing: 5px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 20px 20px 20px 2px rgb(7, 7, 7);
+}
+#Suitcase_Cover_data>button:hover{
+    background-color: black;
+    color: wheat;
+}
+#suitcase_cover_image{
+    height: auto;
+    width: 800px;
+    margin: 10px;
+}
+#transparent_cover_image{
+    height: 580px;
+    width: 500px;
+    mix-blend-mode: multiply;
+    margin-left: 190px;
+}
+/*Suitcase cover data css end*/
+/*Best Product css start*/
+.best_product{
+    width: auto;
+    height: 600px;
+    border-top: 2px solid black;
+    display: flex;
+    padding: 20px;
+}
+#best_product_image_div{
+    width: 750px;
+    height:auto;
+
+}
+#best_product_image{
+    width: 750px;
+    height: 600px;
+    border-radius: 50px;
+}
+#best_product_data{
+    width: 750px;
+    height:auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#best_product_data_image{
+    width: 350px;
+    height: 350px;
+    margin-top: 10px;
+    border-radius: 100%;
+    
+}
+.best_prodct_data{
+    text-align: center;
+    background-color: rgba(240, 248, 255,0.8);
+    border-radius: 20px;
+    text-transform: capitalize;
+    color:black;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 15px;
+}
+#best_prodct_data_btn{
+    width: 150px;
+    height: 60px;
+    background-color: rgba(202,203,201,255);
+    margin-bottom: 10px;
+    border-radius: 20%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 900;
+    cursor: pointer;
+    box-shadow: 20px 20px 20px 2px rgb(7, 7, 7);
+}
+#best_prodct_data_btn:hover{
+    a{
+        color: wheat;
+    }
+    background-color: black;
+    
+}
+
+/*Best Product css end*/
+/*School Bag css Start*/
+#school_bag{
+    border-top: 2px solid black;
+    width: auto;
+    height: 600px;
+    display: flex;
+    padding: 20px;
+}
+.school_bag_divs{
+    width: 750px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#school_bag_image{
+    width: 750px;
+    height:590px;
+    border-radius: 50px;
+}
+/*School bag css end*/
+/*Benifits css start*/
+#benifits{
+    height: 400px;
+    width: auto;
+    border-top: 2px solid black;
+    display: flex;
+    padding: 20px;
+    background-color: rgba(240, 248, 255,0.5);
+    
+}
+.benifits_divs{
+    width: 500px;
+    height: 400px;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10px;
+}
+.benifits_icons{
+    width: 250px;
+    height: 170px;
+    border-radius: 100%;
+}
+.benifits_icons>h1{
+    text-align: center;
+    text-decoration: underline;
+}
+.benifits_icons>p{
+    text-align: center;
+    font-weight: 900;
+    font-size: x-large;
+    font-style: italic;
+}
+/*Benifits css end*/
+/*about us css start*/
+#about_us{
+    width: auto;
+    height: 500px;
+    border: 5px solid black;
+    display: flex;
+    padding: 20px;
+}
+.about-divs{
+    width: 500px;
+    height: auto;
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.about-divs>h3{
+    cursor: pointer;
+}
+.about-divs>h3:hover{
+    text-decoration: underline;
+}
+#AboutUSimg{
+    width: 500px;
+    height: 490px;
+    border-radius: 100%;
+}
+#contact_icon{
+    display: flex;
+}
+.contact_icons{
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    margin-top: 50px;
+    mix-blend-mode: multiply;
+    border-radius: 100%;
+}
+/*about us css end*/
+/*Products page css start*/
+#product_container{
+    width: auto;
+    margin: 10px;
+    padding: 10px;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
+    column-gap: 10px;
+    row-gap: 20px;
+}
+.products_contain{
+    width: 330px;
+    height: 350px;
+    background-color: white;
+    border: 2px solid black;
+    box-shadow: 10px 10px 5px rgb(212, 210, 208) ;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    align-items: center;
+}
+#products_image{
+    align-self: center;
+    border-radius: 20px;
+    width: 330px;
+    height: 200px;
+}
+#products_name{
+    text-align: center;
+    font-size: large;
+    text-transform: capitalize;
+}
+.products_contain>button{
+    width: 100px;
+    height: 50px;
+    background-color: rgba(202,203,201,255,0);
+    border-radius: 20%;
+    font-weight: 900;
+    cursor: pointer;
+}
+.products_contain>button:hover{
+    a{
+        color: wheat;
+    }
+    background-color: black;
+    
+}
+/*Products page css end*/
+/*Product Page css start*/
+#product_containers{
+    width: auto;
+    height: 700px;
+    border: 5px solid black;
+    display: flex;
+    padding: 10px;
+    
+}
+#product_data_info{
+    width: 950px;
+    height: 630px;
+    margin-left: 10px;
+    border-radius: 22px;
+}
+#product_image{
+    width: 500px;
+    height: 500px;
+    border-radius: 22px;
+}
+#button_container{
+    display: flex;
+    position: absolute;
+    width: 500px;
+    height: 80px;
+    margin-top: 520px;
+
+    
+}
+.product_btn{
+    width: 250px;
+    margin-left: 10px;
+    background-color: rgba(202,203,201,255,0);
+    border-radius: 20%;
+    font-weight: 900;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+}
+
+#product_image>img{
+    width: 500px;
+    height: 500px;
+    border-radius: 22px;
+
+}
+#product_data_info>h1{
+    text-align: center;
+    text-transform: capitalize;
+    
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+.offers{
+    font-size: large;
+    text-transform: capitalize;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 42px;
+    font-weight: 900;
+}
+hr{
+    height: 2px;
+    background-color: black;
+}
+i{
+    text-decoration: underline;
+}
+.product_btn>img{
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+.product_btn:hover{
+    border: 5px solid black;
+}
+#similar_prs{
+    width: auto;
+    height: 350px;
+    display: flex;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.similar_products{
+    width: 350px;
+    height: 350px;
+    border: 5px solid black;
+    margin-left: 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.similar_products_image{
+    width: 350px;
+    height: 200px;
+    border-radius: 20px;
+
+}
+.similar_products>h1{
+    font-size: large;
+    margin-top: 5px;
+}
+.similar_products>h3{
+    margin-top: -2px;
+}
+.similar_products>button{
+    width: 100px;
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 20%;
+    background-color: rgba(202,203,201,255);
+    font-weight: 900;
+    cursor: pointer;
+}
+.similar_products>button:hover{
+    a{
+        color: wheat;
+    }
+    background-color: black;
+}
+/*Product page css end*/
+/*User page css start*/
+#user{
+    margin: 10px;
+    width: auto;
+    height: 450px;
+    border-bottom: 2px dashed black;
+    display: flex;
+    padding: 10px;
+}
+.user_details{
+    width: 500px;
+    height: 450px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20%;
+    background-color: rgba(202,203,201,0.7);
+}
+#usericon{
+    width: 450px;
+    height: 450px;
+    border-radius: 20%;
+    mix-blend-mode: multiply;
+}
+.user_details>h1{
+    text-transform: capitalize;
+    text-align: center;
+    font-size:x-large;
+}
+.user_details>button{
+    width: 150px;
+    height: 50px;
+    background-color:rgba(202,203,201);
+    border-radius: 20%;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+.user_details>button:hover{
+    
+        color: wheat;
+        font-weight: 900;
+    background-color: black;
+}
+#Password_dailog{
+    background-color: rgba(202,203,201,255);
+    border-radius: 20px;
+}
+#pass{
+    height: 30px;
+    border-radius: 20px;
+}
+#submit_btn{
+    background-color: rgba(202,203,201,255);
+    border-radius: 20px;
+    cursor: pointer;
+}
+#submit_btn:hover,#sbtn:hover{
+background-color: black;
+    color: wheat;
+    font-weight: 900;
+}
+.input{
+    width: 300px;
+    height: 35px;
+    border-radius: 20px;
+}
+#sbtn{
+    width: 100px;
+    height: 30px;
+    background-color: rgba(202,203,201,255);
+    border-radius: 20px;
+    cursor: pointer;
+}
+#cartItems{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 5px solid black;
+}
+#update_dailog{
+    background-color: rgba(202,203,201,255);
+    border-radius: 20px;
+}
+/*USer Page Css ends*/
+/*Suitcase cover css start*/
+#coversizechart{
+    width: auto;
+    height: 600px;
+    padding: 10px;
+}
+#coversizechartimg{
+    width: 1480px;
+    height: 600px;
+}
+#suitcasetypes{
+    width: auto;
+    height: 500px;
+    padding: 10px;
+    display: flex;
+}
+.suitcasetypesimgscontainer{
+    width: 700px;
+    height: 500px;
+    margin-left: 20px;
+}
+#resp{
+    display: flex;
+}
+#dc{
+
+    margin-left: 250px; 
+    text-align: center;
+}
+#sc{
+    margin-left: 550px;
+}
+.suitcasetypesimgscontainer>img{
+    width: 700px;
+    height: 500px;
+    border-radius: 20%;
+}
+#sizecontainer{
+    text-align: center;
+    width: auto;
+    height: 480px;
+    border: 5px solid black;
+    padding: 10px;
+    background-color: rgba(202,203,201,0.6);
+    margin-bottom: 10px;
+}
+#cm_to_inch{
+    width: 400px;
+    height: 250px;
+    border: 5px solid black;
+    background-color: rgba(202,203,201,0.6);
+    border-radius: 20px;
+    text-align: center;
+}
+#in{
+    width: 300px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 50px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+/*suitcase cover css end 0.394*/
+/*buynow css start*/
+#buynowcontainer{
+    width: auto;
+    height: 500px;
+    border: 5px solid black;
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+}
+.buynowitems{
+    width: 500px;
+    height: 500px;
+    border-radius: 20%;
+    background-color: rgba(202,203,201,0.7);
+}
+.buynowitems>img{
+    width: 490px;
+    height: 500px;
+    border-radius: 20%;
+}
+#quantitymodify{
+    background-color: rgb(202,203,201);
+}
+#quantity{
+    width: 300px;
+    height: 50px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+#placeorder{
+    width: 1200px;
+    margin-left: 150px;
+    height: 50px;
+    background-color: rgb(188, 181, 170);
+    border: 2px solid black;
+    margin-bottom: 10px;
+    font-weight: 900;
+    cursor: pointer;
+}
+#placeorder:hover{
+    background-color: black;
+    color: wheat;   
+}
+.Messagecss{
+    display: none;
+}
+/*buynow css ends*/
+/*Responsive css starts*/
+@media (max-width: 750px){
+    /*navbar css starts*/
+    #icon{
+        margin-left: -680px;
+    }
+    .nav_elems ,.nav_elem_right ,.nav_elem_search ,#search_logo{
+        visibility: hidden;
+    }
+    #list{
+        display: block;
+        height: 50px;
+        margin-top: 10px;
+        margin-left: 100px;
+        cursor: pointer;
+    }
+    #resp_nav{
+        margin-left: 5px;
+        width: 95vw;
+        height: 600px;
+        background-color: rgb(112, 101, 101);
+        border: 5px solid black;
+    }
+    .resp_nav_elems ,.resp_search_logo,.resp_nav_elem_right{
+        margin-left: 100px;
+        margin-top: 50px;
+    cursor: pointer;
+    }
+    .resp_nav_elem_search{
+        margin-left: 30px;
+    height: 50px;
+    width: 250px;
+    border-radius: 20px;
+    }
+    #resp_search_logo{
+        width: 60px;
+    height: 50px;
+    margin-left: 300px;
+    margin-top: -50px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 20px;
+    }
+    .resp_nav_elem_right{
+        margin-left: 120px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+    margin-top: 5px;
+    }
+    .resp_nav_elem_right:hover{
+        background-color: black;
+    color: wheat;
+    font-weight: 900;
+    }
+    #resp_user_logo{
+        margin-left: 150px;
+        width: 50px; 
+        height: 50px; 
+        margin-top: 5px; 
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+    .dialogs{
+        width: 350px;
+        height: 600px;
+        border-radius: 20%;
+        background-color: rgba(202,203,201,255);
+    }
+    #login_image{
+        width: 30px;
+        height: auto; 
+        display: none;
+    }
+    #loginform{
+        width: 350px;
+        border-radius: 20%;
+        height: 590px;
+        margin-top: 10px;
+        margin-left: 0px;
+    }
+    #close_btn{
+        float: right;
+        width: 40px;
+        margin-right: 30px;
+        height: 40px;
+        border: 2px solid black;
+        border-radius: 50px;
+    }
+    .inputs{
+        width: 340px;
+        height: 50px;
+        border: 2px solid black;
+        border-radius: 50px;
+        margin-bottom: 10px;
+        margin-top: 20px;
+        font-weight: 600;
+    }
+    #submit{
+        width: 100px;
+        height: 50px;
+        border: 2px solid black;
+        border-radius: 20px;
+        cursor: pointer;
+        margin-top: 10px;
+        font-weight: 900;
+    }
+    /*Products Css Start*/
+    #products{
+        padding: 5px;
+        margin-left: 10px;
+        height: 1800px;
+        overflow: hidden;
+        flex-wrap: wrap;
+        border-bottom: 2px solid black;
+    }
+    .sub_products{
+        width: 350px;
+        height: 300px;
+    }
+    .sub_products_imgs{
+        border-radius: 20px;
+        width: 330px;
+        height: 280px;
+    }
+    .products_onhover_button{
+        width: 300px;
+        height: 50px;
+        margin-top: -80px;
+        margin-left: 15px;
+        background-color: rgba(202,203,201,255);
+        color: black;
+        font-weight: 900;
+        cursor: pointer;
+        filter: blur(0px);
+    }
+    /*Products Css  ends*/
+    /*Suitcase cover data css start*/
+    #Suitcase_Cover{
+        width: 350px;
+        height: 800px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    #Suitcase_Cover_data{
+        width: 320px;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .suitcse_cover_data{
+        background-color: whitesmoke;
+        font-size: medium;
+        border-radius: 0%;
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        letter-spacing: 5px;
+        text-align: center;
+    }
+    #Suitcase_Cover_data>button{
+        background-color: whitesmoke;
+        width: 320px;
+        margin-top: 50px;
+        border-radius: 0px;
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+        font-size: larger;
+        color: black;
+        height: 50px;
+        letter-spacing: 5px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+    #suitcase_cover_image{
+        height: auto;
+        width: 320px;
+        margin-left: -180px;
+        margin-top: 50px;
+    }
+    #transparent_cover_image{
+        height: 380px;
+        width: 320px;
+        border-radius: 20%;
+        mix-blend-mode: multiply;
+        margin-left: 190px;
+    }
+    /*Suitcase cover data css end*/
+    /*Best Product css start*/
+    .best_product{
+        width: auto;
+        height: 630px;
+        border-top: 2px solid black;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+    #best_product_image_div{
+        width: 350px;
+        height:auto;
+    }
+    #best_product_image{
+        width: 350px;
+        height: 400px;
+        border-radius: 50px;
+    }
+    #best_product_data{
+        width: 350px;
+        height:auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: medium
+    }
+    #best_product_data_image{
+        width: 350px;
+        height: 350px;
+        margin-top: 10px;
+        border-radius: 100%;
+        display: none;
+    }
+    .best_prodct_data{
+        text-align: center;
+        background-color: rgba(240, 248, 255,0.8);
+        border-radius: 20px;
+        font-size: large;
+        text-transform: capitalize;
+        color:black;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin: 15px;
+    }
+    /*Best Product css ends*/
+    /*School Bag css Start*/
+
+    #school_bag{
+        border-top: 2px solid black;
+        width: 340px;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+    .school_bag_divs{
+        width: 350px;
+        align-items: center;
+    }
+    #school_bag_image{
+        margin-top: 20px;
+        width: 350px;
+        height:350px;
+        border-radius: 50px;
+    }
+    /*School Bag css ends*/
+    /*Benifits css start*/
+    #benifits{
+        height: 1300px;
+        width: auto;
+        border: 2px solid black;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        background-color: rgba(240, 248, 255,0.5);
+    }
+    .benifits_divs{
+        width: 500px;
+        height: 400px;
+        border-radius: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: -90px;
+    }
+    /*Benifits css end*/
+    /*about us css start*/
+    #about_us{
+        width: 350px;
+        height: 1430px;
+        border-top: 5px solid black;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        background-color: rgba(145, 144, 142, 0.8);
+    }
+    #AboutUSimg{
+        width: 360px;
+        height: 360px;
+        border-radius: 100%;
+        margin-left: 10px;
+        margin-bottom: 15px;
+    }
+    .about-divs{
+        width: 430px;
+        height: auto;
+        margin-left: -50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        border-bottom: 5px solid black;
+    }
+    .about-divs>h3{
+        cursor: pointer;
+        font-size: medium;
+    }
+    /*about us css Ends*/
+    /*navbar css ends*/
+    /*Products page css start*/
+    #product_container{
+        width: auto;
+        margin: 4px;
+        padding: 0px;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(4,1fr);
+        column-gap: 5px;
+        row-gap:10px;
+    }
+    .products_contain{
+        width: 180px;
+        border-radius: 0%;
+        height: 250px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        align-items: center;
+    }
+    #products_image{
+        align-self: center;
+        border-radius: 0%;
+        width: 150px;
+        height: 150px;
+    }
+    #prize{
+        margin-top: 5px;
+        font-size:small;
+    }
+    #products_name{
+        text-align: center;
+        font-size:small;
+        text-transform: capitalize;
+    }
+    .products_contain>button{
+        width: 140px;
+        height: 60px;
+        margin-top: 0px;
+        background-color: rgba(202,203,201,255,0);
+        border-radius: 0%;
+        font-weight: 900;
+        cursor: pointer;
+    }
+    /*Products page css ends*/
+    /*Product Page css start*/
+    #product_containers{
+        width: auto;
+        height: 1600px;
+        border: 5px solid black;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        
+    }
+    #product_image>img{
+    width: 350px;
+    height: 350px;
+    border-radius: 22px;
+}
+#product_data_info{
+    width: 350px;
+    height: 630px;
+    margin-left: 10px;
+    margin-top: -80px;
+    font-size: medium;
+    border-radius: 22px;
+}
+#button_container{
+    display: flex;
+    position: absolute;
+    width: 350px;
+    height: 80px;
+    margin-top: 1510px;
+}
+.product_btn{
+    width: 175px;
+    height: 80px;
+    margin-left: 5px;
+    background-color: rgba(202,203,201,255,0);
+    border-radius: 20%;
+    font-weight: 900;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+}
+#similar_prs{
+    width: auto;
+    height: 1480px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-left: -10px;
+}
+    /*Product Page css ends*/
+    /*Suitcase cover css start*/
+    #coversizechart{
+        width: 370px;
+        height: 500px;
+        padding: 10px;
+    }
+    #coversizechartimg{
+        width: 370px;
+        height: 500px;
+    }
+    #resp{
+        display: none;
+    }
+    #suitcasetypes{
+        width: 350px;
+        height: 1100px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .suitcasetypesimgscontainer{
+        width: 350px;
+        height: 500px;
+        margin-left: 0px;
+        margin-bottom: 30px;
+    }
+    .suitcasetypesimgscontainer>img{
+        width: 350px;
+        height: 500px;
+        border-radius: 0%;
+    }
+    #sizecontainer{
+        text-align: center;
+        width: 350px;
+        height: 650px;
+        border: 5px solid black;
+        padding: 10px;
+        margin-left: 2px;
+        background-color: rgba(202,203,201,0.6);
+        margin-bottom: 10px;
+    }
+    /*Suitcase cover css ends*/
+    /*User page css start*/
+    #user{
+        margin: 10px;
+        width: 350px;
+        height: 1450px;
+        border: 2px dashed black;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+    .user_details{
+        width: 350px;
+        height:500px;
+        margin-left: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+        border-radius: 20%;
+        background-color: rgba(202,203,201,1.0);
+    }
+    #usericon{
+        width: 350px;
+        height: 350px;
+        border-radius: 20%;
+        mix-blend-mode: multiply;
+    }
+    .user_details>button{
+        width: 150px;
+        height: 50px;
+        background-color:rgba(202,203,201);
+        border-radius: 20%;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    #cartItems{
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0px;
+        padding-top: 5px;
+        margin-bottom: 10px;
+        border: 0px solid black;
+    }
+    /*User page css ends*/
+    /*buynow css start*/
+    #buynowcontainer{
+        width: 350px;
+        height: 1500px;
+        border: 5px solid black;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        margin: 10px;
+    }
+    .buynowitems{
+        width: 350px;
+        height: 400px;
+        border-radius: 20%;
+        margin-bottom: 80px;
+        background-color: rgba(202,203,201,0.7);
+    }
+    .buynowitems>img{
+        width: 350px;
+        height: 400px;
+        border-radius: 20%;
+    }
+    #placeorder{
+        width: 350px;
+        margin-left: 20px;
+        height: 50px;
+        background-color: rgb(188, 181, 170);
+        border: 2px solid black;
+        margin-bottom: 10px;
+        font-weight: 900;
+        cursor: pointer;
+    }
+    /*buynow css ends*/
+}
+/*Responsive css ends*/
